@@ -6,7 +6,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node dist/index.js",
+    "start": "npx prisma migrate dev && npx prisma generate && npm run build && node dist/index.js",    
+    "prisma:migrate":"prisma migrate deploy",
     "build": "tsc",
     "dev": "nodemon src/index.ts"
   },
@@ -39,6 +40,7 @@
     "typescript": "^4.9.4"
   },
   "dependencies": {
+    "@prisma/client": "^4.7.1",
     "cors": "^2.8.5",
     "express": "^4.18.2",
     "express-async-errors": "^3.1.1",

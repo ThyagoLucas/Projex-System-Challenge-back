@@ -6,6 +6,7 @@ COPY . .
 
 EXPOSE 4000
  
-RUN npm i && npm run build
+RUN npm i
 
-CMD [ "node", "dist/index.js" ]
+
+CMD [ "npm", "start" ]
