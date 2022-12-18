@@ -14,8 +14,8 @@ model User{
   name        String  
   email       String @unique
   password    String 
-  image_url   String  
-  createdAt   DateTime @default(now())
+  image_url   String?
+  created_at  DateTime @default(now())
   session     Session[]
 
   @@map("users")
@@ -25,7 +25,7 @@ model Session{
   id          Int @id @default(autoincrement())
   userId      Int
   token       String
-  createdAt   DateTime @default(now())
+  created_at   DateTime @default(now())
   user        User  @relation(fields: [userId], references: [id])
 
   @@unique([ userId,token ])
