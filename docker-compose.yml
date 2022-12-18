@@ -1,0 +1,25 @@
+services:
+  db_postgres_projex:
+    image: postgres
+    container_name: db_challenge_projex
+    restart: always
+    ports:
+      - 5444:5432
+    env_file:
+      - .env
+    volumes:
+      - db_postgres_projex:/var/lib/postgresql/data
+    
+  
+  node_app_back_challenge:
+    container_name: projex_back_challenge
+    build: .
+    ports:
+      - 4000:4000
+    depends_on:
+      - db_postgres_projex
+    env_file:
+      - .env
+    
+volumes:
+  db_postgres_projex:
