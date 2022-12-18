@@ -1,9 +1,9 @@
-import { Request, Response } from "express";
+import { Request, Response } from 'express';
 
 
 export function rootRequest(req:Request, res:Response){
 
-    console.log('funfei')
+	console.log('funfei');
 
-    res.send('hello world!').status(200);
+	res.send('hello world!').status(200);
 }

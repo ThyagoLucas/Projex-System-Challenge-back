@@ -1,5 +1,5 @@
-import { Router } from "express";
-import { rootRequest } from "../controllers/rootController.js";
+import { Router } from 'express';
+import { rootRequest } from '../controllers/rootController.js';
 
 
 const root = Router();

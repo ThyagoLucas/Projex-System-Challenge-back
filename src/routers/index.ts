@@ -1,6 +1,6 @@
-import { Router } from "express";
-import authentication_router from "./authentication_router.js";
-import root from "./root.js";
+import { Router } from 'express';
+import authentication_router from './authentication_router.js';
+import root from './root.js';
 
 const routers = Router();
 
