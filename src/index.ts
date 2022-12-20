@@ -6,8 +6,8 @@ import cors from 'cors';
 
 const app = express();
 
-app.listen(80, ()=>{
-	console.log('server is running on port 80');
+app.listen(4000, ()=>{
+	console.log('server is running on port 4000');
 });
 
 app.use(cors());
