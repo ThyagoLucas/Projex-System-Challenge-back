@@ -16,7 +16,7 @@ services:
     container_name: projex_back_challenge
     build: .
     ports:
-      - 80:4000
+      - 80:80
     depends_on:
       - db_postgres_projex
     env_file:
