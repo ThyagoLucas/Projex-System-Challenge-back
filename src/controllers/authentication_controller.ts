@@ -15,6 +15,6 @@ export async function user_login(req:Request, res:Response){
 	const login_datas = req.body as User_toLogin;
 
 	const token = await authServ.user_login(login_datas);
-
-	res.send(token).status(200);
+	console.log(token);
+	res.send({token:token}).status(200);
 }
