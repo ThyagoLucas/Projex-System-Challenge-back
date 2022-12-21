@@ -1,15 +1,15 @@
 import { User_toCreate, User_toLogin, Token_tosing, User_session} from './../repositories/authentication_repository.js';
 import * as authRepo from '../repositories/authentication_repository.js';
 import { token_generate } from './utils/jwt_tools.js';
+import { create } from 'domain';
 
 export async function user_register(user:User_toCreate){
 
 	const there_is_user = await authRepo.user_by_email(user.email);
-	if(there_is_user) throw {type:401, message: 'email already registered'};
+	console.log(there_is_user);
+	if(there_is_user) throw {type:401, message: 'Email já cadastrado'};
 	
 	const created = await authRepo.create_user(user);
-
-	if(!created) throw {type:404, message:'internal error try again later :)'};
 	
 }
 

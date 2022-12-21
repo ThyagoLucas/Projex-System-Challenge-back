@@ -4,7 +4,7 @@ services:
     container_name: db_challenge_projex
     restart: always
     ports:
-      - 5432:5432
+      - ${PG_PORT}:5432
     env_file:
       - .env
     volumes:
@@ -16,7 +16,7 @@ services:
     container_name: projex_back_challenge
     build: .
     ports:
-      - 80:4000
+      - ${PORT_EXPOSE}:4000
     depends_on:
       - db_postgres_projex
     env_file:
