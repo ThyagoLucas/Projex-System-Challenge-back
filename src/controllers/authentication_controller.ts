@@ -13,9 +13,10 @@ export async function user_register (req:Request, res:Response){
 }
 
 export async function user_login(req:Request, res:Response){
-	const login_datas = req.body as User_toLogin;
 
+	const login_datas = req.body as User_toLogin;
 	const token = await authServ.user_login(login_datas);
 	console.log(token);
 	res.send({token:token}).status(200);
+	
 }
