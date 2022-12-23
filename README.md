@@ -17,26 +17,12 @@ $ npm start
 # server is running on port 4000>
 ```
 
-## rotas disponíveis
-
-
-### authenticação
-### /register
-### /login
 
 ## :hammer: Features
 
-:ballot_box_with_check: `Sign Up` - Receives username, avatar, email and password.
+:ballot_box_with_check: `/register` - Recebe name, email and password.
 
-:ballot_box_with_check: `Login` - Receives email and password.
+:ballot_box_with_check: `/login` - Recebe email and password.
 
-:ballot_box_with_check: `Search` - you can search for users or hashtags
-
-:ballot_box_with_check: `Follow and Unfollow` - other users and see other users posts on their personal pages
-
-:ballot_box_with_check: `Timeline` - you can publish a post and see in your timeline yours posts and posts from users you follow
-
-:ballot_box_with_check: `Posts` - posts load progressively as the page scrolls, you can like, comment, repost, edit and delete a post.
-## :woman_technologist: Technologies
-
-
+:ballot_box_with_check: `/lagrimas` - Recebe tu ru ru.
+ 
